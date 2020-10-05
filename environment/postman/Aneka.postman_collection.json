@@ -1,0 +1,4157 @@
+{
+	"info": {
+		"_postman_id": "5a81e912-a656-432e-8832-ef749beeef31",
+		"name": "Aneka",
+		"description": "127.0.0.1:8000/\n127.0.0.1:8000/api\nhttp://laravel.sewakan.com/\nhttp://laravel.sewakan.com/api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "LOGOUT",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "andriar.rizkiansah1@mavila.co.id",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/logout",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@anekaarisan.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/login",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ME",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "andriar.rizkiansah1@mavila.co.id",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/me",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REFRESH TOKEN",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@anekaarisan.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/refresh",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "andriar.r6izkiansah8@mavila.co.id",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "andriar",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/users",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "andriar.r6izkiansah8@mavila.co.id",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "andriar",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "referral_code",
+									"value": "USR001",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "08172631782",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "ENABLE",
+									"type": "text"
+								},
+								{
+									"key": "is_active",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/register",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE BULK",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"users\" : [\n    {\n        \"name\": \"aan 6\",\n        \"email\": \"aan1@mail.com\",\n        \"password\": \"secret\"\n    },\n    {\n        \"name\": \"aan 7\",\n        \"email\": \"aan2@mail.com\",\n        \"password\": \"secret\"\n    },\n    {\n        \"name\": \"aan 8\",\n        \"email\": \"aan3@mail.com\",\n        \"password\": \"secret\"\n    }\n]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/users/bulk",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"users",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"name\": \"andriars\",\n        \"email\": \"andriar.r6izkiansah8@mavila.co.id\",\n        \"status\": 0,\n        \"referral_code\": \"USR001\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/users/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"users",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CHANGE STATUS",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/users/{{ID}}/status",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"users",
+								"{{ID}}",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/users?join=roles",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "join",
+									"value": "roles"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/users/{{ID}}?join=roles",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"users",
+								"{{ID}}"
+							],
+							"query": [
+								{
+									"key": "join",
+									"value": "roles"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/users/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"users",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CHANGE PASSWORD",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "current_password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/reset-password",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "WALLET",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\" : \"3eafdeb2-46b3-4197-a413-d781e23342f6\",\n    \"amount\" : 1000,\n    \"status\" : \"IN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/wallets",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"wallets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE BULK",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "andriar.rizkiansah8@mavila.co.id",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "andriar",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "secret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/wallets/bulk",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"wallets",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\" : \"3eafdeb2-46b3-4197-a413-d781e23342f6\",\n    \"amount\" : 10,\n    \"status\" : \"IN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/wallets/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"wallets",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/wallets",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"wallets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/wallets/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"wallets",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/wallets/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"wallets",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ARISAN TRANSACTIONS",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"arisan_id\" : \"3eafdeb2-46b3-4197-a413-d781e23342f6\",\n    \"payment_id\" : \"\",\n    \"meta_arisan\" : {},\n    \"meta_product\" : {},\n    \"status\" : \"WAIT PAYMENT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisantransactions",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisantransactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE BULK",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "andriar.rizkiansah8@mavila.co.id",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "andriar",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "secret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisantransactions/bulk",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisantransactions",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"arisan_id\" : \"3eafdeb2-46b3-4197-a413-d781e23342f6\",\n    \"payment_id\" : \"\",\n    \"meta_arisan\" : {},\n    \"meta_product\" : {},\n    \"status\" : \"WAIT PAYMENT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisantransactions/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisantransactions",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisantransactions",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisantransactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisantransactions/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisantransactions",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisantransactions/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisantransactions",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "NOTIFICATION",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"recipient_id\" : \"107b9b1a-2c56-4c08-96b7-675d91efd366\",\n    \"content\" : \"apa tu\",\n    \"date\" : \"2020-08-12\",\n    \"is_read\" : true,\n    \"category\" : \"COMMISSION\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/notifications",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE BULK",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "andriar.rizkiansah8@mavila.co.id",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "andriar",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "secret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/notifications/bulk",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"notifications",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\" : \"3eafdeb2-46b3-4197-a413-d781e23342f6\",\n    \"amount\" : 10,\n    \"status\" : \"IN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/notifications/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"notifications",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/notifications",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/notifications/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"notifications",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/notifications/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"notifications",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "CATEGORY",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"TV\",\n    \"parent_id\" : \"e0937e4b-d366-4ba3-a71a-e4b6807d74d2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/categories",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE BULK",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "andriar.rizkiansah8@mavila.co.id",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "andriar",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "secret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/categories/bulk",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"categories",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"ELEK 2\",\n    \"parent_id\" : null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/categories/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"categories",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/categories?join=parent,subcategories",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"categories"
+							],
+							"query": [
+								{
+									"key": "join",
+									"value": "parent,subcategories"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/categories/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"categories",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/categories/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"categories",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PRODUCT CATEGORY",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\" : \"97f999a4-b86f-4bbc-8642-a1787cb8f116\",\n    \"category_id\" : \"d1ddb715-515f-4a76-82c7-ed9b4795861c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productcategories",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productcategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE BULK",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productcategories\": [\n        {\n            \"product_id\": \"97f999a4-b86f-4bbc-8642-a1787cb8f116\",\n            \"category_id\": \"d1ddb715-515f-4a76-82c7-ed9b4795861c\"\n        },\n        {\n            \"product_id\": \"97f999a4-b86f-4bbc-8642-a1787cb8f116\",\n            \"category_id\": \"d1ddb715-515f-4a76-82c7-ed9b4795861c\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productcategories/bulk",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productcategories",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\" : \"97f999a4-b86f-4bbc-8642-a1787cb8f116\",\n    \"category_id\" : \"d1ddb715-515f-4a76-82c7-ed9b4795861c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productcategories/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productcategories",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productcategories?join=category",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productcategories"
+							],
+							"query": [
+								{
+									"key": "join",
+									"value": "category"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productcategories/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productcategories",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productcategories/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productcategories",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PRODUCT",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Magic Tissue\",\n    \"base_price\" : 1000,\n    \"periode_price\" : \"DURATION\",\n    \"commission\": 5,\n    \"url_image\" : null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/products",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE BULK",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "andriar.rizkiansah8@mavila.co.id",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "andriar",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "secret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/products/bulk",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"products",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"name\": \"Magic Tissue Max Pro\",\n        \"base_price\": 1000,\n        \"periode_price\": \"DURATION\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/products/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"products",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/products?join=productpromos.promo,productcategories.category",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "join",
+									"value": "productpromos.promo,productcategories.category"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/products/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"products",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/products/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"products",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PROMO",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"name\": \"Promo 11 11 12\",\n   \"status\": \"ENABLE\",\n   \"banner_status\": \"ENABLE\",\n   \"date_start\": \"2020-08-01\",\n   \"date_end\": \"2020-08-02\",\n   \"promo_percent\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productpromos",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productpromos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE BULK",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "andriar.rizkiansah8@mavila.co.id",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "andriar",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "secret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/promos/bulk",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"promos",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"name\": \"Promo 12 12 12\",\n   \"status\": \"ENABLE\",\n   \"banner_status\": \"ENABLE\",\n   \"date_start\": \"2020-08-01\",\n   \"date_end\": \"2020-08-02\",\n   \"promo_percent\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/promos/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"promos",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/promos",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"promos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/promos/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"promos",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/promos/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"promos",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PRODUCT PROMO",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"product_id\": \"97f999a4-b86f-4bbc-8642-a1787cb8f116\",\n   \"promo_id\": \"105df518-bbdb-47f3-8cfa-7695fecb9b75\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productpromos",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productpromos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE BULK",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "andriar.rizkiansah8@mavila.co.id",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "andriar",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "secret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productpromos/bulk",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productpromos",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"product_id\": \"97f999a4-b86f-4bbc-8642-a1787cb8f116\",\n   \"promo_id\": \"105df518-bbdb-47f3-8cfa-7695fecb9b75\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productpromos/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productpromos",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productpromos",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productpromos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productpromos/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productpromos",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productpromos/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productpromos",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PRODUCT DETAIL",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\" : \"d421d449-1b38-4461-985c-d273ded1a3d4\",\n    \"price\": 10000,\n    \"periode\" : 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productdetails",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productdetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE BULK",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "andriar.rizkiansah8@mavila.co.id",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "andriar",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "secret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productdetails/bulk",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productdetails",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\" : \"d421d449-1b38-4461-985c-d273ded1a3d4\",\n    \"price\": 12000,\n    \"periode\" : 6\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productdetails/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productdetails",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE BULK",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productdetails\": [\n        {\n            \"id\": \"76673085-e152-4f6b-b25e-817d84697779\",\n            \"product_id\": \"c6b0625b-df71-4846-ae38-92deb87dde8b\",\n            \"price\": 11000,\n            \"periode\": 5,\n            \"created_at\": \"2020-08-18 16:35:27\",\n            \"updated_at\": \"2020-08-18 16:35:27\"\n        },\n        {\n            \"id\": \"eebe1f77-c65c-4444-ab7c-d2baf3f05774\",\n            \"product_id\": \"c6b0625b-df71-4846-ae38-92deb87dde8b\",\n            \"price\": 10000,\n            \"periode\": 5,\n            \"created_at\": \"2020-08-18 16:35:27\",\n            \"updated_at\": \"2020-08-18 16:35:27\"\n        },\n        {\n            \"id\": \"3e62175b-4587-4b44-98d3-cae489e74a8a\",\n            \"product_id\": \"c6b0625b-df71-4846-ae38-92deb87dde8b\",\n            \"price\": 10000,\n            \"periode\": 5,\n            \"created_at\": \"2020-08-19 08:06:31\",\n            \"updated_at\": \"2020-08-19 08:06:31\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productdetails/{{ID_PRODUCT}}/bulk",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productdetails",
+								"{{ID_PRODUCT}}",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productdetails",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productdetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productdetails/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productdetails",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/productdetails/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"productdetails",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ARISAN MEMBER",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Magic Tissue Group\",\n    \"product_id\": \"ea9c73dd-b9c7-47f1-a1a4-0d81550b3175\",\n    \"status\": 1,\n    \"meta_product\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisanmembers",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisanmembers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE BULK",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"arisanmembers\": [\n        {\n            \"name\": \"Magic Tissue 1\",\n            \"product_id\": \"ea9c73dd-b9c7-47f1-a1a4-0d81550b3175\",\n            \"status\": 1,\n            \"meta_product\": null\n        },\n        {\n            \"name\": \"Magic Tissue 2\",\n            \"product_id\": \"ea9c73dd-b9c7-47f1-a1a4-0d81550b3175\",\n            \"status\": 1,\n            \"meta_product\": null\n        },\n        {\n            \"name\": \"Magic Tissue 3\",\n            \"product_id\": \"ea9c73dd-b9c7-47f1-a1a4-0d81550b3175\",\n            \"status\": 1,\n            \"meta_product\": null\n        },\n        {\n            \"name\": \"Magic Tissue 4\",\n            \"product_id\": \"ea9c73dd-b9c7-47f1-a1a4-0d81550b3175\",\n            \"status\": 1,\n            \"meta_product\": null\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisanmembers/bulk",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisanmembers",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Magic Tissue Group 1\",\n    \"product_id\": \"ea9c73dd-b9c7-47f1-a1a4-0d81550b3175\",\n    \"status\": 1,\n    \"meta_product\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisanmembers/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisanmembers",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisanmembers",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisanmembers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisanmembers/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisanmembers",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisanmembers/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisanmembers",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ARISAN",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sequence_code\": \"NOURUT01\",\n    \"duration\": 1,\n    \"start_date\": \"2020-08-01\",\n    \"end_date\": \"2020-12-01\",\n    \"total_funds\": 500000,\n    \"average_funds\": 200000,\n    \"status\": \"PROGRESS\",\n    \"user_id\": \"95eca239-1c03-402c-abd0-3ba65de46581\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisans",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE BULK",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"arisanmembers\": [\n        {\n            \"name\": \"Magic Tissue 1\",\n            \"product_id\": \"ea9c73dd-b9c7-47f1-a1a4-0d81550b3175\",\n            \"status\": 1,\n            \"meta_product\": null\n        },\n        {\n            \"name\": \"Magic Tissue 2\",\n            \"product_id\": \"ea9c73dd-b9c7-47f1-a1a4-0d81550b3175\",\n            \"status\": 1,\n            \"meta_product\": null\n        },\n        {\n            \"name\": \"Magic Tissue 3\",\n            \"product_id\": \"ea9c73dd-b9c7-47f1-a1a4-0d81550b3175\",\n            \"status\": 1,\n            \"meta_product\": null\n        },\n        {\n            \"name\": \"Magic Tissue 4\",\n            \"product_id\": \"ea9c73dd-b9c7-47f1-a1a4-0d81550b3175\",\n            \"status\": 1,\n            \"meta_product\": null\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisans/bulk",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisans",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sequence_code\": \"NOURUT02\",\n    \"duration\": 1,\n    \"start_date\": \"2020-08-01\",\n    \"end_date\": \"2020-12-01\",\n    \"total_funds\": 500000,\n    \"average_funds\": 200000,\n    \"status\": \"PROGRESS\",\n    \"user_id\": \"95eca239-1c03-402c-abd0-3ba65de46581\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisans/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisans",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisans",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisans/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisans",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/arisans/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"arisans",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "COMMISSIONS",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"commission_percent\" : 0.5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/commissions",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"commissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE BULK",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "andriar.rizkiansah8@mavila.co.id",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "andriar",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "secret",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/commissions/bulk",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"commissions",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"commission_percent\" : 0.5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/commissions/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"commissions",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/commissions",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"commissions"
+							],
+							"query": [
+								{
+									"key": "join",
+									"value": "productpromos.promo,productcategories.category",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/commissions/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"commissions",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/commissions/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"commissions",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "IMAGES",
+			"item": [
+				{
+					"name": "UPLOAD",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/andriar/Pictures/nutri/Screenshot_20200613-104142_Dev - My Food Diary.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/masterimages",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"masterimages"
+							]
+						},
+						"description": "upload for 1 image"
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOAD MULTIPLE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file[0]",
+									"type": "file",
+									"src": "/home/andriar/Downloads/1:1.png"
+								},
+								{
+									"key": "file[1]",
+									"type": "file",
+									"src": "/home/andriar/Pictures/nutri/Screenshot_20200613-104142_Dev - My Food Diary.jpg",
+									"disabled": true
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_API}}/masterimages/bulk",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"masterimages",
+								"bulk"
+							]
+						},
+						"description": "upload for 1 image"
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL_API}}/masterimages?where_in[]=ae0ab2fb-f5c3-4668-8a9d-8399c1670561&where_in[]=ab2f5fe6-9df5-4ad8-a824-1d8f1541c1ec",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"masterimages"
+							],
+							"query": [
+								{
+									"key": "where_in[]",
+									"value": "ae0ab2fb-f5c3-4668-8a9d-8399c1670561"
+								},
+								{
+									"key": "where_in[]",
+									"value": "ab2f5fe6-9df5-4ad8-a824-1d8f1541c1ec"
+								}
+							]
+						},
+						"description": "upload for 1 image"
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL_API}}/masterimages/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"masterimages",
+								"{{ID}}"
+							]
+						},
+						"description": "upload for 1 image"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL_API}}/masterimages/{{ID}}",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"masterimages",
+								"{{ID}}"
+							]
+						},
+						"description": "upload for 1 image"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PROVINCE",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL_API}}/provinces",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"provinces"
+							]
+						},
+						"description": "Get all province of ID"
+					},
+					"response": []
+				},
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL_API}}/provinces/11",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"provinces",
+								"11"
+							]
+						},
+						"description": "Get all province of ID"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "REGION/CITY",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL_API}}/regions/11.01",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"regions",
+								"11.01"
+							]
+						},
+						"description": "Get all province of ID"
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL_API}}/regions",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"regions"
+							]
+						},
+						"description": "Get all province of ID"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "DISTRICT/KECAMATAN",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL_API}}/districts/11.01.01",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"districts",
+								"11.01.01"
+							]
+						},
+						"description": "Get all province of ID"
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL_API}}/districts",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"districts"
+							]
+						},
+						"description": "Get all province of ID"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "VILLAGE/KELURAHAN",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL_API}}/villages/11.01.01.2001",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"villages",
+								"11.01.01.2001"
+							]
+						},
+						"description": "Get all province of ID"
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL_API}}/villages",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"villages"
+							]
+						},
+						"description": "Get all province of ID"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "REGION ALL",
+			"item": [
+				{
+					"name": "FETCH PROVINCE",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL_API}}/provinces",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"provinces"
+							],
+							"query": [
+								{
+									"key": "where_in[]",
+									"value": "ae0ab2fb-f5c3-4668-8a9d-8399c1670561",
+									"disabled": true
+								},
+								{
+									"key": "where_in[]",
+									"value": "ab2f5fe6-9df5-4ad8-a824-1d8f1541c1ec",
+									"disabled": true
+								}
+							]
+						},
+						"description": "upload for 1 image"
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH REGION",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL_API}}/regions?filter[]=id,11",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"regions"
+							],
+							"query": [
+								{
+									"key": "where_in[]",
+									"value": "ab2f5fe6-9df5-4ad8-a824-1d8f1541c1ec",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "filter[]",
+									"value": "id,11"
+								}
+							]
+						},
+						"description": "upload for 1 image"
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH DISTRICT",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL_API}}/districts?filter[]=id,11.01.",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"districts"
+							],
+							"query": [
+								{
+									"key": "where_in[]",
+									"value": "ab2f5fe6-9df5-4ad8-a824-1d8f1541c1ec",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "filter[]",
+									"value": "id,11.01."
+								}
+							]
+						},
+						"description": "upload for 1 image"
+					},
+					"response": []
+				},
+				{
+					"name": "FETCH VILLAGES",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL_API}}/villages?filter[]=id,11.01.10",
+							"host": [
+								"{{BASE_URL_API}}"
+							],
+							"path": [
+								"villages"
+							],
+							"query": [
+								{
+									"key": "where_in[]",
+									"value": "ab2f5fe6-9df5-4ad8-a824-1d8f1541c1ec",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "filter[]",
+									"value": "id,11.01.10"
+								}
+							]
+						},
+						"description": "upload for 1 image"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
